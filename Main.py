@@ -24,6 +24,13 @@ def string_manipulator():
             string_analysis()
         keep_going = input("Would you like to choose another option? (y/n) ")
         
+def character_replacer(string):
+    #ask for character to replace
+    #ask for what to replace with
+    #find character in string
+    #replace with new character
+    #return new string
+    
     
     
     
