@@ -31,7 +31,8 @@ def character_replacer(string):
     #replace with new character
     #return new string
     
-    
-    
+    #ask for character and replacement
+    og = input('What character is to be replaced? ')
+    replacement = input(f'What is {og} to be replaced with? ')
     
     
