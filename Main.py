@@ -1,5 +1,6 @@
 #main
 
+
 def string_manipulator():
     #string_manipulator accepts no arguments
     #it takes a user-inputted string and performs various string manipulations using loops, conditional statements, and functions
