@@ -50,7 +50,25 @@ def string_manipulator():
             string_analysis()
         keep_going = input("Would you like to choose another option? (y/n) ")
         
+def character_replacer(string):
+    #ask for character to replace
+    #ask for what to replace with
+    #find character in string
+    #replace with new character
+    #return new string
     
+    #ask for character and replacement
+    og = input('What character is to be replaced? ')
     
+    while og not in string:
+        
+        og = input('What character in the text is to be replaced? ')
+    else:
+        replacement = input(f'What is {og} to be replaced with? ')
+        
+        new_string = string.replace(og, replacement)
+        
     
-    
+    return new_string
+
+
