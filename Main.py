@@ -1,6 +1,5 @@
 #main
 
-
 def character_counter(string):
     #accepts a string as a argument
     #has lists of consonants and vowels
@@ -37,17 +36,19 @@ def string_manipulator():
     while keep_going == 'y':
         choice = menu()
         if choice == 1:
-            input_gathering()
+            string = input_gathering()
         elif choice == 2:
-            string_reversal()
+            string_reversal(string)
         elif choice == 3:
-            count_vowels()
+            character_counter(string)
         elif choice == 4:
-            character_counter()
+            character_replacer(string)
         elif choice == 5:
-            character_replacer
+            string_analysis(string)
         elif choice == 6:
-            string_analysis()
+            print("\nExiting...")
+            break
+            
         keep_going = input("Would you like to choose another option? (y/n) ")
         
 def character_replacer(string):
@@ -71,4 +72,22 @@ def character_replacer(string):
     
     return new_string
 
-
+def menu():
+    #menu accepts no arguments
+    #it creates a menu allowing user to choose which operation to perform
+    
+    print("Welcome to the String Manipulator! \n")
+    
+    print("1.) Input a string")
+    print("2.) Reverse a string")
+    print("3.) Count characters")
+    print("4.) Replace characters")
+    print("5.) Analyze a string")
+    print("6.) Exit")
+    
+    choice = input("\nPlease choose an option (1-6): ")
+    
+    if choice.isdigit() == False:
+        choice = input("Oops! You didn't enter a number.\n\nPlease choose an option (1-6): ")
+    
+    return int(choice)
