@@ -33,6 +33,16 @@ def character_replacer(string):
     
     #ask for character and replacement
     og = input('What character is to be replaced? ')
-    replacement = input(f'What is {og} to be replaced with? ')
     
+    while og not in string:
+        
+        og = input('What character in the text is to be replaced? ')
+    else:
+        replacement = input(f'What is {og} to be replaced with? ')
+        
+        new_string = string.replace(og, replacement)
     
+        new_string = string.replace(og, replacement)
+    
+    return new_string
+
