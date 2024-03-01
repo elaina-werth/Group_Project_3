@@ -34,6 +34,7 @@ def string_manipulator():
     keep_going = 'y'
     
     #call menu, call chosen function, ask for keepgoing
+    print("Welcome to the String Manipulator!\n")
     while keep_going == 'y':
         choice = menu()
         if choice == 1:
@@ -41,26 +42,28 @@ def string_manipulator():
         elif choice == 2:
             string_reversal(string)
         elif choice == 3:
-            character_counter(string)
+            con_found, vow_found = character_counter(string)
+            print (f"\nYour string has {con_found} consonants and {vow_found} vowel(s).")
         elif choice == 4:
-            character_replacer(string)
+            new_string = character_replacer(string)
+            print("\nYour new string is", new_string)
         elif choice == 5:
             string_analysis(string)
         elif choice == 6:
             print("\nExiting...")
             break
             
-        keep_going = input("Would you like to choose another option? (y/n) ")
+        keep_going = input("\nWould you like to choose another option? (y/n): ")
         
 def input_gathering():
     #accepts no arguments
     #asks for a string a least 5 digits long
     #return string to string_manipulator()
     
-    string = input('Enter a string that is at least 5 digits long')
+    string = input('\nEnter a string that is at least 5 digits long: ')
     
     while len(string) <= 4:
-        string = input('Enter a string that is AT LEAST 5 digits long')
+        string = input('\nEnter a string that is AT LEAST 5 digits long: ')
     else:
         return string
       
@@ -89,7 +92,6 @@ def menu():
     #menu accepts no arguments
     #it creates a menu allowing user to choose which operation to perform
     
-    print("Welcome to the String Manipulator! \n")
     
     print("1.) Input a string")
     print("2.) Reverse a string")
@@ -101,6 +103,6 @@ def menu():
     choice = input("\nPlease choose an option (1-6): ")
     
     if choice.isdigit() == False:
-        choice = input("Oops! You didn't enter a number.\n\nPlease choose an option (1-6): ")
+        choice = input("\nOops! You didn't enter a number.\n\nPlease choose an option (1-6): ")
     
     return int(choice)
