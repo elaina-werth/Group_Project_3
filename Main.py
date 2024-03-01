@@ -25,6 +25,7 @@ def character_counter(string):
     
     #return amount each occoured
     return con_found, vow_found
+
 def string_manipulator():
     #string_manipulator accepts no arguments
     #it takes a user-inputted string and performs various string manipulations using loops, conditional statements, and functions
@@ -51,6 +52,18 @@ def string_manipulator():
             
         keep_going = input("Would you like to choose another option? (y/n) ")
         
+def input_gathering():
+    #accepts no arguments
+    #asks for a string a least 5 digits long
+    #return string to string_manipulator()
+    
+    string = input('Enter a string that is at least 5 digits long')
+    
+    while len(string) <= 4:
+        string = input('Enter a string that is AT LEAST 5 digits long')
+    else:
+        return string
+      
 def character_replacer(string):
     #ask for character to replace
     #ask for what to replace with
