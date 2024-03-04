@@ -7,7 +7,7 @@ def menu():
     print("Welcome to the String Manipulator! \n")
     
     print("1.) Input a string")
-    print("2.) Reverse a strint")
+    print("2.) Reverse a string")
     print("3.) Count characters")
     print("4.) Replace characters")
     print("5.) Analyze a string")
