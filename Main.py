@@ -40,7 +40,8 @@ def string_manipulator():
         if choice == 1:
             string = input_gathering()
         elif choice == 2:
-            string_reversal(string)
+            reverse = string_reversal(string)
+            print (f"\n{string} reversed is {reverse}. ")
         elif choice == 3:
             con_found, vow_found = character_counter(string)
             print (f"\nYour string has {con_found} consonants and {vow_found} vowel(s).")
@@ -106,3 +107,11 @@ def menu():
         choice = input("\nOops! You didn't enter a number.\n\nPlease choose an option (1-6): ")
     
     return int(choice)
+
+def string_reversal(string):
+    #string_reversal accepts a string as an argument
+    #it returns its reversed form
+    
+    reverse = string [::-1]
+    
+    return reverse
