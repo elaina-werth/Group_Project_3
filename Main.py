@@ -115,3 +115,52 @@ def string_reversal(string):
     reverse = string [::-1]
     
     return reverse
+
+
+def string_analysis(string):
+    
+    #assign capitals and lowercase vowels and consanants
+    consanant = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z']
+    vowel = ['a','e','i','o','u']
+    vowel2 = ['A','E','I','O','U']
+    consanant2 = ['B','C','D','F','G','H','J','K','L','M','N','P','Q','R','S','T','V','W','X','Y','Z']
+    specchar = ['&','*','(',')','+','=','_','-','|','\\','{','}','[',']',';',':','<',',','>','.','?','/','"',"'",'^','%','$','#','@','!','`','~']
+    
+    #palindrome?
+    
+    vowel_count = 0
+    consonant_count = 0
+    
+    for character in string:
+        if character in specchar:
+            string = string.strip(character)
+    for thing in string:
+        if thing in vowel or thing in vowel2:
+            vowel_count += 1
+        elif thing in consanant or thing in consanant2:
+            consonant_count += 1
+        
+        
+    
+    gnirts = string[::-1]
+    #assign a counter
+    counter = 0
+    #remove spaces
+    string2 = string.strip(' ')
+    
+    #find amount of characters in string
+    for letter in string2:
+        if letter in consanant or letter in vowel or letter in consanant2 or letter in vowel2:
+            counter += 1 #update the counter
+        
+        
+    print('There are', counter, 'total letters in your string.') #print the data
+    
+    #find if palindrome
+    if string == gnirts:
+        print('It is a palindrome.')
+    else:
+        print('It is not a palindrome.')
+    print('There are', vowel_count, 'vowels in the string.') 
+    print('There are', consonant_count, 'consonants in your string.')
+
